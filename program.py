@@ -257,6 +257,17 @@ class Comp(Player):
             y = randint(0, 5)
             return Dot(x, y)
 
+class Greet:
+    @staticmethod
+    def greet():
+        print(f'{Game.blue}')
+        print(f'{Game.blue}{"*" * 100}\n')
+        print(f' {Game.blue} ПРИВЕТСТВУЕМ ВАС В ИГРЕ "Морской бой" \n')
+        print(f' {Game.blue} ФОРМАТ ВВОДА X Y ')
+        print(f' {Game.blue} X - номер строки')
+        print(f' {Game.blue} Y - номер столбца \n')
+        print(f'{Game.blue}{"*" * 100}')
+
 
 class Game(Color):
     check = 0
@@ -328,18 +339,6 @@ class Game(Color):
                 print(f'{self.red}\n ВЫ ПОБЕДИЛИ !!!\n{self.red}')
                 break
         return False
-
-
-class Greet:
-    @staticmethod
-    def greet():
-        print(f'{Game.blue}')
-        print(f'{Game.blue}{"*" * 100}\n')
-        print(f' {Game.blue} ПРИВЕТСТВУЕМ ВАС В ИГРЕ "Морской бой" \n')
-        print(f' {Game.blue} ФОРМАТ ВВОДА X Y ')
-        print(f' {Game.blue} X - номер строки')
-        print(f' {Game.blue} Y - номер столбца \n')
-        print(f'{Game.blue}{"*" * 100}')
 
 
 clear = lambda: os.system('cls')
